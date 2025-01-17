@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 practice</title>
+</head>
+<body>
+    
+
+</body>
+<script>
+    // VAR LET CONST
+
+    // Q1. Difference between var , let ,const 
+    //Ans.
+        // var global scope hota hai
+        // let ka block scope hota hai , if agar let ko script tag me use ki ya hai th uska script scope hota hai.
+        // const ka block scope hai , if agar const ko script tag me use ki ya hai th uska script scope hota hai.
+
+
+            // 2 reason for difference between let and const are
+                // let ko reassign kar sakte hai , redeclare nhi kar sakte  [redeclare  no ,  reassign  yes]
+                // const ko reassign bhi nhi kar sakte or redeclare bhi kar sakte  [redeclare  no ,  reassign  no]
+
+    // For eaxmple
+    function sum() {
+        for (let i =1; i < 5; i++){
+            console.log(i)
+        }
+        // console.log(i)
+    }
+
+    sum()
+
+
+
+    // ARRAY Methodes 
+
+
+    // At method
+    let  arr=[1,2,3,4,5]
+    // let rr = arr.at(2)
+    console.log(arr)
+    console.log(arr.at(3),'At method value')
+    // console.log(rr)
+
+
+    // Concat method
+    const arr1 = ['jhon','jonny'];
+    const arr2 = ['scout','simp'];
+    console.log(arr1)
+    console.log(arr2)
+    let eSportsplayer=arr1.concat(arr2)
+    console.log(eSportsplayer,'esportplayer')
+
+
+    //Every method
+
+    let age = [32,45,16,32,17];
+
+        function checkAge(age){
+            return age > 18;
+        }
+
+        console.log(age.every(checkAge),'every method value')
+
+
+     //Filter method
+     
+     let ages = [28,54,36,18,16];
+    //  let result = ages.filter(checkAdult);
+
+     function checkAdult(ages){
+        return ages >= 18;
+     }
+
+     console.log(ages.filter(checkAdult),'filter method value')
+
+
+     //Find method
+
+    const vay = [3,10,45,28,20];
+
+    function checkAge(vay) {
+        return vay > 18;
+    }
+    console.log(vay.find(checkAge),'Find method vallue')
+
+    //findIndex  method
+
+    const p =[13,41,82,43];
+
+    function checkp(p){
+        return p > 50;
+    }
+    console.log(p.findIndex(checkp),'findIndex method value')
+</script>
+</html>
